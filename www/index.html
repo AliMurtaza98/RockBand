@@ -42,7 +42,7 @@
     <body>
   <div id="page-wrap" >
 		<input type="text" id="TextField">
-		<button id="boton" onClick="addArtists()">Search</button>      
+		<button id="boton">Search</button>      
 		<ol id="myList"></ol>
 		<script type="text/javascript">
        function addArtists() {
@@ -61,6 +61,9 @@
           }).fail(function () {
           	alert("ERROR");
           });
+	       $(document).ready( function ()  {
+				$('#boton').click(addArtists);
+			});
         }
       </script>
 	  </div>
